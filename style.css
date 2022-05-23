@@ -1,0 +1,112 @@
+@media screen and (max-width: 375px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .cards-container .card {
+        margin: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .cards-container {
+    width: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --post-background-color: linear-gradient(grey, white)
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: max-content;
+    background: linear-gradient(rgba(128, 128, 128, 0.656), white);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px;
+}
+
+.user-info {
+    height: 45px;
+    display: grid;
+    grid-template-columns:5px 50px 1fr 50px;
+    grid-template-areas: 
+        ". img name sidebtn"
+        ". img date sidebtn";
+}
+
+.user-img {
+    margin-top: 5px;
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 17.5px;
+    grid-area: img;
+    
+}
+.user-name {
+    grid-area: name;
+    margin-top: 5px;
+    
+}
+.post-date {
+    grid-area: date;
+    font-size: smaller;
+    color: white;
+    margin-top: 0;
+}
+.side-btn {
+    grid-area: sidebtn;
+    text-align: end;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.side-btn a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.image-description {
+    padding-left: 5px;
+    margin-bottom: 7px;
+}
+.image-description .user-link{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.buttons-container {
+    height: 20px;
+    padding: 5px 10px;
+}
+.buttons-container ion-icon {
+    padding-right: 5px;
+    color: black;
+}
